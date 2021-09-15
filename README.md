@@ -14,50 +14,34 @@ More information about the plans for version 4 can be found in [the announcement
 The user guide corresponding to this version of the framework can be found
 [here](https://codeigniter4.github.io/userguide/).
 
-## Installation & updates
+## Instalations
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+untuk menjalankan aplikasi backend berikut, lakukan perintah
+`git clone -b backend <url repository>`
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+setelah proses download selesai, lakukan proses instalasi package. Diharapkan telah melakukan instalasi [composer](https://getcomposer.org/). Jangan lupa untuk melakukan instalasi xampp, atau lainnya karna kita menggunakan database MYSQL.
 
-## Setup
+instalasi package dapat dilakukan dengan perintah
+`composer update`
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+lakukan import database. database diberi nama
+`e-commerce-labkito.sql`
 
-## Important Change with index.php
+## Running
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Untuk menjalankan aplikasi lakukan perintah.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+> php spark serve
 
-**Please** read the user guide for a better explanation of how CI4 works!
+buka aplikasi di URL [http://localhost:8080](http://localhost:8080)
+atau jika ingin melakukan costumisasi port. lakukan perintah
 
-## Repository Management
+> php spark serve --port 8081
 
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+maka aplikasi dapat di buka di URL [http://localhost:8081](http://localhost:8081).
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Set Up
 
-## Server Requirements
+untuk menjalankan aplikasi, perhatikan file `env` pada root folder. Duplikasi file tersebut, dan rename menjadi `.env`. Lakukan penyesuaian pada database dan environtment URL.
 
-PHP version 7.3 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+Baca documentasi REST API di [Documentasi](https://github.com/LabKito/E-Commerce-kecil/blob/backend/app/Controllers/API/README.md)
