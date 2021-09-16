@@ -24,8 +24,7 @@ setelah proses download selesai, lakukan proses instalasi package. Diharapkan te
 instalasi package dapat dilakukan dengan perintah
 `composer update`
 
-lakukan import database. database diberi nama
-`e-commerce-labkito.sql`
+
 
 ## Running
 
