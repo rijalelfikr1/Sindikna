@@ -17,7 +17,7 @@ The user guide corresponding to this version of the framework can be found
 ## Instalations
 
 untuk menjalankan aplikasi backend berikut, lakukan perintah
-`git clone -b backend <url repository>`
+`git clone <url repository>`
 
 setelah proses download selesai, lakukan proses instalasi package. Diharapkan telah melakukan instalasi [composer](https://getcomposer.org/). Jangan lupa untuk melakukan instalasi xampp, atau lainnya karna kita menggunakan database MYSQL.
 
