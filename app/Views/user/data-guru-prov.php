@@ -108,8 +108,8 @@
                                             href="<?= base_url('user/datadiri/' . $data['id']) ?>"><?= $data['Nama']; ?></a>
                                     </td>
                                     <td><?= $data['Jabatan']; ?></td>
-                                    <td><?= $data['id_sekolah']; ?></td>
-                                    <td><?= $data['id_kabupaten']; ?></td>
+                                    <td><?= $data['sekolah']; ?></td>
+                                    <td><?= $data['Kota']; ?></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </tbody>

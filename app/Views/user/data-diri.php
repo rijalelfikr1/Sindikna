@@ -72,7 +72,7 @@
                         <li><a href="data-tanjungpinang.html">Kota Tanjungpinang</a></li>
                         <li><a href="data-kecamatan.html">Kec. Tanjungpinang Barat</a></li>
                         <li><a href="data-guru.html">SMAN 1 Tanjungpinang</a></li>
-                        <li>Budi Utama</li>
+                        <li><?= $DetailUser['Nama'] ?></li>
                     </ol>
                 </div>
 
@@ -142,7 +142,7 @@
                                     <h6>Kab/Kota</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
-                                    <?= $DetailUser['id_kabupaten'] ?>
+                                    <?= $DetailUser['sekolah'] ?>
                                 </div>
                             </div>
                             <div class="row">
@@ -248,7 +248,9 @@
 
     <!-- Template Main JS File -->
     <script src="<?= base_url() ?>/js/main.js"></script>
-
+    <script>
+    console.log(<?= $DetailUser['Tanggal_Masuk'] ?>)
+    </script>
 </body>
 
 </html>

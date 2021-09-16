@@ -38,9 +38,6 @@ class User extends BaseController
 
     public function kabupatenKota()
     {
-
-
-
         return view('user/data-kab_kot');
     }
 
@@ -49,6 +46,7 @@ class User extends BaseController
         $data = [
             'DetailUser' => $this->userModel->find($id),
         ];
+
         return view('user/data-diri', $data);
     }
 }
