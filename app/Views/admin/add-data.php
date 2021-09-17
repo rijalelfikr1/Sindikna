@@ -255,92 +255,99 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12">
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">NIK</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                <form action="<?= base_url('admin/addUser'); ?>" method="POST">
+                                                    <?= csrf_field(); ?>
+
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">NIK</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" class="form-control" id="nik" name="nik">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Nama</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Nama</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" class="form-control" id="name">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label
-                                                        class="col-form-label col-12 col-md-3 col-lg-3">Alamat</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Alamat</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" class="form-control" id="alamat">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Tempat
-                                                        Lahir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Tempat
+                                                            Lahir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" class="form-control" id="tempatLahir">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
-                                                        Lahir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
+                                                            Lahir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="date" class="form-control" id="tanggalLahir">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Agama</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
-                                                            <option>Pilih Agama</option>
-                                                            <option>Islam</option>
-                                                            <option>Kristen</option>
-                                                            <option>Katolik</option>
-                                                            <option>Buddha</option>
-                                                            <option>Hindu</option>
-                                                            <option>Konghucu</option>
-                                                        </select>
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Agama</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <select class="form-control selectric" id="agama">
+                                                                <option>Pilih Agama</option>
+                                                                <option>Islam</option>
+                                                                <option>Kristen</option>
+                                                                <option>Katolik</option>
+                                                                <option>Buddha</option>
+                                                                <option>Hindu</option>
+                                                                <option>Konghucu</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">No.
-                                                        Telp/HP</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="tel" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">No.
+                                                            Telp/HP</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="tel" class="form-control" id="noHp">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Jenis
-                                                        Kelamin</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
-                                                            <option>Pilih Jenis Kelamin</option>
-                                                            <option>Laki - laki</option>
-                                                            <option>Perempuan</option>
-                                                        </select>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Jenis
+                                                            Kelamin</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <select class="form-control selectric" id="JK">
+                                                                <option>Pilih Jenis Kelamin</option>
+                                                                <option>Laki - laki</option>
+                                                                <option>Perempuan</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Pendidikan
-                                                        Terakhir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Pendidikan
+                                                            Terakhir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" class="form-control" id="pendidikan">
+                                                        </div>
                                                     </div>
-                                                </div>
                                             </div>
 
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">NRPTK</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" id="nrptk">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Kab/Kota
                                                         Sekolah</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
+                                                        <select class="form-control selectric" id="kabupaten">
                                                             <option>Pilih Kab/Kota</option>
                                                             <option>Kab. Anambas</option>
                                                             <option>Kab. Bintan</option>
@@ -356,7 +363,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Pilih
                                                         Sekolah</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
+                                                        <select class="form-control selectric" id="sekolah">
                                                             <option>Pilih Sekolah</option>
                                                             <option>SMAN 1 Tanjungpinang</option>
                                                             <option>SMAN 2 Tanjungpinang</option>
@@ -372,51 +379,51 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
                                                         Masuk</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control">
+                                                        <input type="date" class="form-control" id="tanggal masuk">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label
                                                         class="col-form-label col-12 col-md-3 col-lg-3">Jabatan</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" id="jabatan">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No.
                                                         NPWP</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" id="npwp">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No. BPJS
                                                         Kesehatan</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" id="bpjsKes">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No. BPJS
                                                         Tenaga Kerja</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" id="bpjsTK">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
                                                         Keluar</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control">
+                                                        <input type="date" class="form-control" id="tglKeluar">
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-12 text-center mt-3">
-                                                <a href="#" class="btn btn-icon icon-left btn-primary"><i
+                                                <a type="submit" class="btn btn-icon icon-left btn-primary"><i
                                                         class="fab fa-telegram-plane"></i> Tambah Data</a>
                                             </div>
-
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

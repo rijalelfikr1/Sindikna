@@ -23,6 +23,8 @@ class UserModel extends Model
         return $result;
     }
 
+
+
     public function getUserDetail($id)
     {
         $this->select('user.id as id, no_rek, NIK, Nama, Alamat, Pendidikan_Terakhir, Kota, Tempat_lahir, Agama, Telp, JK, id_sekolah, sekolah, id_kabupaten, Tanggal_Masuk, Jabatan, No_NPWP, No_BPJS_Kes, No_BPJS_TK, Tgl_keluar');

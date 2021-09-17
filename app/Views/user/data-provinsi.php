@@ -80,56 +80,35 @@
             <div class="container">
                 <div class="row">
                     <div class="title-data-provinsi">
-                        <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010"
+                        <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="<?= $jumlah ?>"
                                 data-purecounter-duration="1" class="purecounter"></span></h3>
                     </div>
                     <div class="panel table-responsive">
                         <table id="provinsi" class="table table-bordered table-hover border-dark">
                             <thead class="table-primary border-dark">
                                 <tr>
-                                    <th>PTK Non ASN</th>
-                                    <th>Jumlah</th>
-                                    <th>Laki - laki</th>
-                                    <th>Perempuan</th>
+                                    <th scope="col">PTK Non ASN</th>
+                                    <th scope="col">Jumlah</th>
+                                    <th scope="col">Laki - laki</th>
+                                    <th scope="col">Perempuan</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach ($posisiList as $data) : ?>
+
                                 <tr>
-                                    <td><a href="/user/guruprov">Guru</a></td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
+
+                                    <th scope="row"> <a
+                                            href="/user/dataprov/<?= $data['posisi'] ?>"><?= $data['posisi'] ?></a>
+                                    </th>
+
+                                    <td><?= $jumlah ?></td>
+                                    <td><?= $laki ?></td>
+                                    <td><?= $perempuan ?></td>
+
                                 </tr>
-                                <tr>
-                                    <td>Laboran</td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
-                                </tr>
-                                <tr>
-                                    <td>Penjaga Sekolah</td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
-                                </tr>
-                                <tr>
-                                    <td>Pustakawan</td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
-                                </tr>
-                                <tr>
-                                    <td>Tenaga Administrasi</td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
-                                </tr>
-                                <tr>
-                                    <td>Tenaga Kebersihan</td>
-                                    <td>3000</td>
-                                    <td>1500</td>
-                                    <td>2100</td>
-                                </tr>
+                                <?php endforeach; ?>
+
                             </tbody>
                         </table>
                     </div>

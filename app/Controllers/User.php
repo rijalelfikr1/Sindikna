@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\SekolahModel;
 use App\Models\KotaModel;
-
+use App\Models\PosisiModel;
 
 class User extends BaseController
 {
@@ -13,6 +13,7 @@ class User extends BaseController
     public function __construct()
     {
         $this->userModel = new UserModel();
+        $this->posisiModel = new PosisiModel();
         $this->sekolahModel = new SekolahModel();
         $this->kotaModel = new KotaModel();
     }
@@ -24,12 +25,39 @@ class User extends BaseController
 
     public function dataprovinsi()
     {
-        return view('user/data-provinsi');
+        $db     = \Config\Database::connect();
+        $builder = $db->table('user');
+        $builder->countAllResults();
+
+        $builder->like('JK', 'Laki-Laki');
+        $laki = $builder->countAllResults();
+        $builder->like('JK', 'Perempuan');
+        $perempuan = $builder->countAllResults();
+        $builder->like('JK');
+        $jumlah = $builder->countAllResults();
+
+
+        $data = [
+            'posisiList' => $this->posisiModel->getAllPosisi(),
+
+            'laki' => $laki,
+            'perempuan' => $perempuan,
+            'jumlah' => $jumlah
+        ];
+
+        return view('user/data-provinsi', $data);
     }
 
-    public function guruprov()
+    public function dataprov()
     {
+        $db     = \Config\Database::connect();
+        $builder = $db->table('user');
+        $builder->countAllResults();
+        $builder->like('JK');
+        $jumlah = $builder->countAllResults();
         $data = [
+            'jumlah' => $jumlah,
+
             'userList' => $this->userModel->getAllUser()
         ];
 
@@ -48,6 +76,8 @@ class User extends BaseController
 
     public function datadiri($id)
     {
+
+
         $data = [
             'DetailUser' => $this->userModel->find($id),
             'Sekolah' => $this->sekolahModel->where('id', $id)->findAll()[0],

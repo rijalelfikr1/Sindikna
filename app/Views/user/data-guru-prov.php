@@ -87,8 +87,9 @@
                     </div>
                     <div class="col-md-7">
                         <div class="title-data-provinsi">
-                            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010"
-                                    data-purecounter-duration="1" class="purecounter"></span></h3>
+                            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0"
+                                    data-purecounter-end="<?= $jumlah ?>" data-purecounter-duration="1"
+                                    class="purecounter"></span></h3>
                         </div>
                     </div>
                     <div class="panel table-responsive">

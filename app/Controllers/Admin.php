@@ -12,4 +12,12 @@ class Admin extends BaseController
     {
         return view('admin/add-data');
     }
+
+    public function addUser()
+    {
+        if (!$this->validate([
+            'nik'
+        ])) {
+        }
+    }
 }
