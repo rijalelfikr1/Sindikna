@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Sep 2021 pada 08.09
+-- Waktu pembuatan: 17 Sep 2021 pada 11.49
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `disdik_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `jabatan`
+--
+
+CREATE TABLE `jabatan` (
+  `id` int(11) NOT NULL,
+  `posisi` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jabatan`
+--
+
+INSERT INTO `jabatan` (`id`, `posisi`) VALUES
+(1, 'Guru'),
+(2, 'Laboran'),
+(3, 'Penjaga Sekolah'),
+(4, 'Pustakawan'),
+(5, 'Tenaga Administrasi'),
+(6, 'Tenaga Kebersihan');
 
 -- --------------------------------------------------------
 
@@ -97,19 +120,27 @@ CREATE TABLE `user` (
   `No_BPJS_Kes` varchar(50) NOT NULL,
   `No_BPJS_TK` varchar(50) NOT NULL,
   `Tgl_keluar` date DEFAULT NULL,
-  `date_create` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `no_rek`, `NIK`, `Nama`, `Pendidikan_Terakhir`, `Alamat`, `Tempat_lahir`, `Tanggal_lahir`, `Agama`, `Telp`, `JK`, `NRPTK`, `id_kabupaten`, `id_sekolah`, `Tanggal_Masuk`, `Jabatan`, `No_NPWP`, `No_BPJS_Kes`, `No_BPJS_TK`, `Tgl_keluar`, `date_create`) VALUES
-(1, '0154826154', 123456, 'Anuu', 'S1 Pendidikan Agama Islam', 'jalan raja muda', 'tanjungpinang', '2000-04-03', 'Islam', 258520, 'Laki-Laki', '025878520', 1, 1, '2021-09-09', 'Kepala Dinas', '025878965412', '023658485', '256848268', '2021-09-16', '2021-09-15 16:12:37');
+INSERT INTO `user` (`id`, `no_rek`, `NIK`, `Nama`, `Pendidikan_Terakhir`, `Alamat`, `Tempat_lahir`, `Tanggal_lahir`, `Agama`, `Telp`, `JK`, `NRPTK`, `id_kabupaten`, `id_sekolah`, `Tanggal_Masuk`, `Jabatan`, `No_NPWP`, `No_BPJS_Kes`, `No_BPJS_TK`, `Tgl_keluar`, `created_at`, `updated_at`) VALUES
+(1, '0154826154', 123456, 'Anuu', 'S1 Pendidikan Agama Islam', 'jalan raja muda', 'tanjungpinang', '2000-04-03', 'Islam', 258520, 'Laki-Laki', '025878520', 1, 1, '2021-09-09', 'Kepala Dinas', '025878965412', '023658485', '256848268', '2021-09-16', '2021-09-15 16:12:37', '2021-09-17 09:17:04'),
+(2, '3435324', 354546, 'siapa', 'S1 teknik', 'Tanjungpinang', 'tanjungpinang', '2021-09-15', 'Islam', 53423, 'Laki-Laki', '324235465345', 1, 1, '2021-09-02', 'Kepala Dinas', '02587896541223', '124123', '123123', NULL, '2021-09-17 03:49:38', '2021-09-17 09:17:04');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `jabatan`
+--
+ALTER TABLE `jabatan`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `kabupatenkota`
@@ -150,7 +181,7 @@ ALTER TABLE `sekolah`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
