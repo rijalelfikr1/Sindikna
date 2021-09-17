@@ -3,6 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\SekolahModel;
+use App\Models\KotaModel;
+
 
 class User extends BaseController
 {
@@ -10,6 +13,8 @@ class User extends BaseController
     public function __construct()
     {
         $this->userModel = new UserModel();
+        $this->sekolahModel = new SekolahModel();
+        $this->kotaModel = new KotaModel();
     }
 
     public function index()
@@ -45,6 +50,8 @@ class User extends BaseController
     {
         $data = [
             'DetailUser' => $this->userModel->find($id),
+            'Sekolah' => $this->sekolahModel->where('id', $id)->findAll()[0],
+            'Kota' => $this->kotaModel->where('id', $id)->findAll()[0]
         ];
 
         return view('user/data-diri', $data);

@@ -134,7 +134,7 @@
                                     <h6>Tempat Tugas</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
-                                    <?= $DetailUser['id_sekolah'] ?>
+                                    <?= $Sekolah['sekolah'] ?>
                                 </div>
                             </div>
                             <div class="row">
@@ -142,7 +142,7 @@
                                     <h6>Kab/Kota</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
-                                    <?= $DetailUser['sekolah'] ?>
+                                    <?= $Kota['Kota'] ?>
                                 </div>
                             </div>
                             <div class="row">
