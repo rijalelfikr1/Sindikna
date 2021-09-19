@@ -14,7 +14,9 @@
     <link href="<?= base_url() ?>/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="<?= base_url() ?>/vendor/aos/aos.css" rel="stylesheet">
@@ -207,7 +209,7 @@
                 <div class="col-lg-12 text-center">
                     Copyright &copy; <span>
                         <script>
-                            document.write(new Date().getFullYear());
+                        document.write(new Date().getFullYear());
                         </script>
                     </span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
                 </div>
@@ -226,7 +228,8 @@
         </div>
     </div>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="<?= base_url() ?>/vendor/aos/aos.js"></script>
@@ -246,7 +249,7 @@
     <!-- Template Main JS File -->
     <script src="<?= base_url() ?>/js/main.js"></script>
     <script>
-        console.log(<?= $DetailUser['Tanggal_Masuk'] ?>)
+    console.log(<?= $DetailUser['Tanggal_Masuk'] ?>)
     </script>
 </body>
 

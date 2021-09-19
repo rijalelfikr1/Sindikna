@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
+
 class Admin extends BaseController
 {
 
@@ -16,6 +17,27 @@ class Admin extends BaseController
     {
         return view('auth-login-2');
     }
+
+    public function editData()
+    {
+
+        $data = [
+            'userList' => $this->userModel->getAllUser()
+        ];
+
+        return view('admin/edit-data', $data);
+    }
+
+    public function ubahData($id)
+    {
+
+        $data = [
+            'DetailUser' => $this->userModel->find($id),
+        ];
+
+        return view('admin/ubah-data', $data);
+    }
+
     public function tambahData()
     {
         return view('admin/add-data');
@@ -67,11 +89,10 @@ class Admin extends BaseController
             'No_BPJS_TK' => $this->request->getVar('bpjsTK'),
             'Tgl_keluar' => $this->request->getVar('tglKeluar'),
 
-
         ]);
 
         session()->setFlashdata('success', 'Data berhasil ditambahkan');
 
-        return redirect()->to('/admin/tambahData');
+        return redirect()->to('/admin/ediData');
     }
 }
