@@ -14,9 +14,7 @@
     <link href="<?= base_url() ?>/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="<?= base_url() ?>/vendor/aos/aos.css" rel="stylesheet">
@@ -87,14 +85,12 @@
                     </div>
                     <div class="col-md-7">
                         <div class="title-data-provinsi">
-                            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0"
-                                    data-purecounter-end="<?= $jumlah ?>" data-purecounter-duration="1"
-                                    class="purecounter"></span></h3>
+                            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="<?= $jumlah ?>" data-purecounter-duration="1" class="purecounter"></span></h3>
                         </div>
                     </div>
                     <div class="panel table-responsive">
-                        <table id="provinsi" class="table table-bordered table-hover border-dark">
-                            <thead class="table-primary border-dark">
+                        <table id="provinsi" class="table table-bordered table-hover">
+                            <thead>
                                 <tr>
                                     <th>Nama</th>
                                     <th>Jabatan</th>
@@ -104,14 +100,13 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($userList as $data) : ?>
-                                <tr>
-                                    <td> <a
-                                            href="<?= base_url('user/datadiri/' . $data['id']) ?>"><?= $data['Nama']; ?></a>
-                                    </td>
-                                    <td><?= $data['Jabatan']; ?></td>
-                                    <td><?= $data['sekolah']; ?></td>
-                                    <td><?= $data['Kota']; ?></td>
-                                </tr>
+                                    <tr>
+                                        <td> <a href="<?= base_url('user/datadiri/' . $data['id']) ?>"><?= $data['Nama']; ?></a>
+                                        </td>
+                                        <td><?= $data['Jabatan']; ?></td>
+                                        <td><?= $data['sekolah']; ?></td>
+                                        <td><?= $data['Kota']; ?></td>
+                                    </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
@@ -129,7 +124,7 @@
                 <div class="col-lg-12 text-center">
                     Copyright &copy; <span>
                         <script>
-                        document.write(new Date().getFullYear());
+                            document.write(new Date().getFullYear());
                         </script>
                     </span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
                 </div>
@@ -148,8 +143,7 @@
         </div>
     </div>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="<?= base_url() ?>/vendor/aos/aos.js"></script>

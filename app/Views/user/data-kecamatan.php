@@ -80,41 +80,41 @@
       <div class="container">
         <div class="row">
           <div class="title-data-provinsi">
-              <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010" data-purecounter-duration="1" class="purecounter"></span></h3>
+            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010" data-purecounter-duration="1" class="purecounter"></span></h3>
           </div>
           <div class="panel table-responsive">
-            <table id="provinsi" class="table table-bordered table-hover border-dark">
-                <thead class="table-primary border-dark">
-                    <tr>
-                        <th>Nama Sekolah</th>
-                        <th>Jumlah</th>
-                        <th>Laki-Laki</th>
-                        <th>Perempuan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="data-guru.html">SMAN 1 Tanjungpinang</a></td>
-                        <td>20</td>
-                        <td>10</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">SMAN 3 Tanjungpinang</a></td>
-                        <td>20</td>
-                        <td>10</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">SMAN 5 Tanjungpinang</a></td>
-                        <td>20</td>
-                        <td>10</td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
+            <table id="provinsi" class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Nama Sekolah</th>
+                  <th>Jumlah</th>
+                  <th>Laki-Laki</th>
+                  <th>Perempuan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="data-guru.html">SMAN 1 Tanjungpinang</a></td>
+                  <td>20</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td><a href="#">SMAN 3 Tanjungpinang</a></td>
+                  <td>20</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td><a href="#">SMAN 5 Tanjungpinang</a></td>
+                  <td>20</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
             </table>
           </div>
-      </div>
+        </div>
     </section><!-- End Data Provinsi Section -->
 
   </main><!-- End #main -->
@@ -124,7 +124,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          Copyright &copy; <span><script>document.write(new Date().getFullYear());</script></span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
+          Copyright &copy; <span>
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
         </div>
       </div>
     </div>

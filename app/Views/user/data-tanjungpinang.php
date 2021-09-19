@@ -79,48 +79,48 @@
       <div class="container">
         <div class="row">
           <div class="title-data-provinsi">
-              <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010" data-purecounter-duration="1" class="purecounter"></span></h3>
+            <h3>Jumlah PTK Non ASN: <span data-purecounter-start="0" data-purecounter-end="5010" data-purecounter-duration="1" class="purecounter"></span></h3>
           </div>
           <div class="panel table-responsive">
-            <table id="provinsi" class="table table-bordered table-hover border-dark">
-                <thead class="table-primary border-dark">
-                    <tr>
-                        <th>Kecamatan</th>
-                        <th>SLB</th>
-                        <th>SMA</th>
-                        <th>SMK</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="data-kecamatan.html">Kec. Bukit Bestari</a></td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><a href="data-kecamatan.html">Kec. Tanjungpinang Barat</a></td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><a href="data-kecamatan.html">Kec. Tanjungpinang Kota</a></td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><a href="data-kecamatan.html">Kec. Tanjungpinang Timur</a></td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
+            <table id="provinsi" class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Kecamatan</th>
+                  <th>SLB</th>
+                  <th>SMA</th>
+                  <th>SMK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="data-kecamatan.html">Kec. Bukit Bestari</a></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td><a href="data-kecamatan.html">Kec. Tanjungpinang Barat</a></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td><a href="data-kecamatan.html">Kec. Tanjungpinang Kota</a></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td><a href="data-kecamatan.html">Kec. Tanjungpinang Timur</a></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
             </table>
           </div>
 
-      </div>
+        </div>
     </section><!-- End Data Provinsi Section -->
 
   </main><!-- End #main -->
@@ -130,7 +130,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          Copyright &copy; <span><script>document.write(new Date().getFullYear());</script></span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
+          Copyright &copy; <span>
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </span> <strong>Dinas Pendidikan Provinsi Kepulauan Riau</strong>
         </div>
       </div>
     </div>
