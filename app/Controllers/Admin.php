@@ -77,7 +77,7 @@ class Admin extends BaseController
             'Tanggal_lahir' => $this->request->getVar('tanggalLahir'),
             'Agama' => $this->request->getVar('agama'),
             'Telp' => $this->request->getVar('noHp'),
-            'JK	' => $this->request->getVar('JK'),
+            'JK' => $this->request->getVar('JK'),
             'Pendidikan_Terakhir' => $this->request->getVar('pendidikan'),
             'id_kabupaten' => $this->request->getVar('kabupaten'),
             'id_sekolah' => $this->request->getVar('sekolah'),
@@ -94,5 +94,50 @@ class Admin extends BaseController
         session()->setFlashdata('success', 'Data berhasil ditambahkan');
 
         return redirect()->to('/admin/ediData');
+    }
+    public function updateData($id)
+    {
+        $NIK = $this->request->getVar('nik');
+        $Nama = $this->request->getVar('name');
+        $Alamat = $this->request->getVar('alamat');
+        $Tempat_lahir = $this->request->getVar('tempatLahir');
+        $Tanggal_lahir = $this->request->getVar('tanggalLahir');
+        $Agama = $this->request->getVar('agama');
+        $Telp = $this->request->getVar('noHp');
+        $JK = $this->request->getVar('JK');
+        $Pendidikan_Terakhir = $this->request->getVar('pendidikan');
+        $id_kabupaten = $this->request->getVar('kabupaten');
+        $id_sekolah = $this->request->getVar('sekolah');
+        $Tanggal_Masuk = $this->request->getVar('tanggalMasuk');
+        $Jabatan = $this->request->getVar('jabatan');
+        $No_NPWP = $this->request->getVar('npwp');
+        $NRPTK = $this->request->getVar('nrptk');
+        $No_BPJS_Kes = $this->request->getVar('bpjsKes');
+        $No_BPJS_TK = $this->request->getVar('bpjsTK');
+        $Tgl_keluar = $this->request->getVar('tglKeluar');
+
+        $this->userModel->save([
+            'id' => $id,
+            'NIK' => $NIK,
+            'Nama' => $Nama,
+            'Alamat' => $Alamat,
+            'Tempat_lahir' => $Tempat_lahir,
+            'Tanggal_lahir' => $Tanggal_lahir,
+            'Agama' => $Agama,
+            'Telp' => $Telp,
+            'JK' => $JK,
+            'Pendidikan_Terakhir' => $Pendidikan_Terakhir,
+            'id_kabupaten' => $id_kabupaten,
+            'id_sekolah' => $id_sekolah,
+            'Tanggal_Masuk' => $Tanggal_Masuk,
+            'Jabatan' => $Jabatan,
+            'No_NPWP' => $No_NPWP,
+            'NRPTK' => $NRPTK,
+            'No_BPJS_Kes' => $No_BPJS_Kes,
+            'No_BPJS_TK' => $No_BPJS_TK,
+            'Tgl_keluar' => $Tgl_keluar,
+        ]);
+
+        return redirect()->to('admin/editData');
     }
 }

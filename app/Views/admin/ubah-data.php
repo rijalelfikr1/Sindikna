@@ -200,15 +200,15 @@
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
-                        <li><a class="nav-link" href="index.html"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
+                        <li><a class="nav-link" href="/"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
                         </li>
                         <li class="menu-header">Menu</li>
                         <li class="nav-item dropdown active">
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-user"></i>
                                 <span>PTK Non ASN</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="lihat-data.html">Lihat Data</a></li>
-                                <li class="active"><a class="nav-link" href="edit-data.html">Ubah Data</a></li>
+                                <li><a class="nav-link" href="/admin/editData">Lihat Data</a></li>
+                                <li class="active"><a class="nav-link" href="/admin/editData">Ubah Data</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -234,14 +234,14 @@
                 <section class="section">
                     <div class="section-header">
                         <div class="section-header-back">
-                            <a href="edit-data.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                            <a href="/admin/editData" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                         </div>
                         <h1>Ubah Data</h1>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="index.html">Dashboard</a></div>
+                            <div class="breadcrumb-item active"><a href="/">Dashboard</a></div>
                             <div class="breadcrumb-item"><a href="#">PTK Non ASN</a></div>
-                            <div class="breadcrumb-item"><a href="edit-data.html">Ubah Data</a></div>
-                            <div class="breadcrumb-item">Budi Anton</div>
+                            <div class="breadcrumb-item"><a href="/admin/editData">Ubah Data</a></div>
+                            <div class="breadcrumb-item"><?= $DetailUser['Nama'] ?></div>
                         </div>
                     </div>
 
@@ -253,94 +253,103 @@
                                         <h4>Ubah Data</h4>
                                     </div>
                                     <div class="card-body">
+
                                         <div class="row">
+
+
                                             <div class="col-lg-6 col-md-12">
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">NIK</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
-                                                            value="<?= $DetailUser['NIK'] ?>">
+                                                <form action="<?= base_url('admin/updateData/' . $DetailUser['id']) ?>"
+                                                    method="POST">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">NIK</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" name="nik" class="form-control"
+                                                                value="<?= $DetailUser['NIK'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Nama</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
-                                                            value="<?= $DetailUser['Nama'] ?>">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Nama</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" name="name" class="form-control"
+                                                                value="<?= $DetailUser['Nama'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label
-                                                        class="col-form-label col-12 col-md-3 col-lg-3">Alamat</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
-                                                            value="<?= $DetailUser['Alamat'] ?>">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Alamat</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" name="alamat" class="form-control"
+                                                                value="<?= $DetailUser['Alamat'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Tempat
-                                                        Lahir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
-                                                            value="<?= $DetailUser['Tempat_lahir'] ?>">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Tempat
+                                                            Lahir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" name="tempatLahir" class="form-control"
+                                                                value="<?= $DetailUser['Tempat_lahir'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
-                                                        Lahir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control"
-                                                            value="<?= $DetailUser['Tanggal_lahir'] ?>">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
+                                                            Lahir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="date" name="tanggalLahir" class="form-control"
+                                                                value="<?= $DetailUser['Tanggal_lahir'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Agama</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
-                                                            <option disabled>Pilih Agama</option>
-                                                            <option>Islam</option>
-                                                            <option>Kristen</option>
-                                                            <option>Katolik</option>
-                                                            <option>Buddha</option>
-                                                            <option>Hindu</option>
-                                                            <option>Konghucu</option>
-                                                        </select>
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Agama</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <select class="form-control selectric" name="agama">
+                                                                <option disabled>Pilih Agama</option>
+                                                                <option>Islam</option>
+                                                                <option>Kristen</option>
+                                                                <option>Katolik</option>
+                                                                <option>Buddha</option>
+                                                                <option>Hindu</option>
+                                                                <option>Konghucu</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">No.
-                                                        Telp/HP</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="tel" class="form-control"
-                                                            value="<?= $DetailUser['Telp'] ?>">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">No.
+                                                            Telp/HP</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="tel" name="noHp" class="form-control"
+                                                                value="<?= $DetailUser['Telp'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Jenis
-                                                        Kelamin</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
-                                                            <option disabled>Pilih Jenis Kelamin</option>
-                                                            <option>Laki - laki</option>
-                                                            <option>Perempuan</option>
-                                                        </select>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-12 col-md-3 col-lg-3">Jenis
+                                                            Kelamin</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <select class="form-control selectric" name="JK">
+                                                                <option disabled>Pilih Jenis Kelamin</option>
+                                                                <option>Laki - laki</option>
+                                                                <option>Perempuan</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-form-label col-12 col-md-3 col-lg-3">Pendidikan
-                                                        Terakhir</label>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
-                                                            value="<?= $DetailUser['Pendidikan_Terakhir'] ?>">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-form-label col-12 col-md-3 col-lg-3">Pendidikan
+                                                            Terakhir</label>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <input type="text" name="pendidikan" class="form-control"
+                                                                value="<?= $DetailUser['Pendidikan_Terakhir'] ?>">
+                                                        </div>
                                                     </div>
-                                                </div>
                                             </div>
 
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">NRPTK</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
+                                                        <input type="text" name="nrptk" class="form-control"
                                                             value="<?= $DetailUser['NRPTK'] ?>">
                                                     </div>
                                                 </div>
@@ -348,7 +357,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Kab/Kota
                                                         Sekolah</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
+                                                        <select class="form-control selectric" name="kabupaten">
                                                             <option disabled>Pilih Kab/Kota</option>
                                                             <option>Kab. Anambas</option>
                                                             <option>Kab. Bintan</option>
@@ -364,7 +373,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Pilih
                                                         Sekolah</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <select class="form-control selectric">
+                                                        <select class="form-control selectric" name="sekolah">
                                                             <option disabled>Pilih Sekolah</option>
                                                             <option>SMAN 1 Tanjungpinang</option>
                                                             <option>SMAN 2 Tanjungpinang</option>
@@ -380,7 +389,7 @@
                                                     <label
                                                         class="col-form-label col-12 col-md-3 col-lg-3">Jabatan</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
+                                                        <input type="text" name="jabatan" class="form-control"
                                                             value="<?= $DetailUser['Jabatan'] ?>">
                                                     </div>
                                                 </div>
@@ -388,7 +397,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
                                                         Masuk</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control"
+                                                        <input type="date" name="tanggalMasuk" class="form-control"
                                                             value="<?= $DetailUser['Tanggal_Masuk'] ?>">
                                                     </div>
                                                 </div>
@@ -396,7 +405,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No.
                                                         NPWP</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
+                                                        <input type="text" name="npwp" class="form-control"
                                                             value="<?= $DetailUser['No_NPWP'] ?>">
                                                     </div>
                                                 </div>
@@ -404,7 +413,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No. BPJS
                                                         Kesehatan</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
+                                                        <input type="text" name="bpjsKes" class="form-control"
                                                             value="<?= $DetailUser['No_BPJS_Kes'] ?>">
                                                     </div>
                                                 </div>
@@ -412,7 +421,7 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">No. BPJS
                                                         Tenaga Kerja</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="text" class="form-control"
+                                                        <input type="text" name="bpjsTK" class="form-control"
                                                             value="<?= $DetailUser['No_BPJS_TK'] ?>">
                                                     </div>
                                                 </div>
@@ -420,19 +429,21 @@
                                                     <label class="col-form-label col-12 col-md-3 col-lg-3">Tanggal
                                                         Keluar</label>
                                                     <div class="col-sm-12 col-md-7">
-                                                        <input type="date" class="form-control">
+                                                        <input type="date" name="tglKeluar" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-12 mt-3">
-                                                <a href="#" class="btn btn-icon icon-left btn-success mr-2"><i
-                                                        class="far fa-save"></i> Simpan Data</a>
+                                                <button type="submit" class="btn btn-icon icon-left btn-success mr-2"><i
+                                                        class="far fa-save"></i> Tambah Data</button>
+
                                                 <a href="#" class="btn btn-icon icon-left btn-danger"><i
                                                         class="fas fa-times"></i></i> Batal</a>
                                             </div>
-
+                                            </form>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -206,8 +206,8 @@
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-user"></i>
                                 <span>PTK Non ASN</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="lihat-data.html">Lihat Data</a></li>
-                                <li class="active"><a class="nav-link" href="edit-data.html">Ubah Data</a></li>
+                                <li><a class="nav-link" href="/admin/editData">Lihat Data</a></li>
+                                <li class="active"><a class="nav-link" href="/admin/editData">Ubah Data</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -234,7 +234,7 @@
                     <div class="section-header">
                         <h1>Ubah Data</h1>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="index.html">Dashboard</a></div>
+                            <div class="breadcrumb-item active"><a href="/">Dashboard</a></div>
                             <div class="breadcrumb-item"><a href="#">PTK Non ASN</a></div>
                             <div class="breadcrumb-item">Ubah Data</div>
                         </div>
