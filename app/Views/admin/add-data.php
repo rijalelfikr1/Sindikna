@@ -311,13 +311,13 @@
                                                         <div class="col-sm-12 col-md-7">
                                                             <select class="form-control selectric" id="agama"
                                                                 name="agama">
-                                                                <option>Pilih Agama</option>
-                                                                <option>Islam</option>
-                                                                <option>Kristen</option>
-                                                                <option>Katolik</option>
-                                                                <option>Buddha</option>
-                                                                <option>Hindu</option>
-                                                                <option>Konghucu</option>
+                                                                <option disabled>Pilih Agama</option>
+                                                                <option value="Islam">Islam</option>
+                                                                <option value="Kristen">Kristen</option>
+                                                                <option value="Katolik">Katolik</option>
+                                                                <option value="Budhha">Buddha</option>
+                                                                <option value="Hindu">Hindu</option>
+                                                                <option value="Konghucu">Konghucu</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -334,9 +334,9 @@
                                                             Kelamin</label>
                                                         <div class="col-sm-12 col-md-7">
                                                             <select class="form-control selectric" id="JK" name="JK">
-                                                                <option>Pilih Jenis Kelamin</option>
-                                                                <option>Laki - laki</option>
-                                                                <option>Perempuan</option>
+                                                                <option disabled>Pilih Jenis Kelamin</option>
+                                                                <option value="Laki-laki">Laki - laki</option>
+                                                                <option value="Perempuan">Perempuan</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -365,13 +365,13 @@
                                                         <select class="form-control selectric" id="kabupaten"
                                                             name="kabupaten">
                                                             <option disabled>Pilih Kab/Kota</option>
-                                                            <option>Kab. Anambas</option>
-                                                            <option>Kab. Bintan</option>
-                                                            <option>Kab. Karimun</option>
-                                                            <option>Kab. Lingga</option>
-                                                            <option>Kab. Natuna</option>
-                                                            <option>Kota Batam</option>
-                                                            <option>Kota Tanjungpinang</option>
+                                                            <option value="1">Kab. Anambas</option>
+                                                            <option value="2">Kab. Bintan</option>
+                                                            <option value="3">Kab. Karimun</option>
+                                                            <option value="4">Kab. Lingga</option>
+                                                            <option value="5">Kab. Natuna</option>
+                                                            <option value="6">Kota Batam</option>
+                                                            <option value="7">Kota Tanjungpinang</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -382,13 +382,13 @@
                                                         <select class="form-control selectric" id="sekolah"
                                                             name="sekolah">
                                                             <option disabled>Pilih Sekolah</option>
-                                                            <option>SMAN 1 Tanjungpinang</option>
-                                                            <option>SMAN 2 Tanjungpinang</option>
-                                                            <option>SMAN 3 Tanjungpinang</option>
-                                                            <option>SMAN 4 Tanjungpinang</option>
-                                                            <option>SMAN 5 Tanjungpinang</option>
-                                                            <option>SMAN 6 Tanjungpinang</option>
-                                                            <option>SMAN 7 Tanjungpinang</option>
+                                                            <option value="1">SMAN 1 Tanjungpinang</option>
+                                                            <option value="2">SMAN 2 Tanjungpinang</option>
+                                                            <option value="3">SMAN 3 Tanjungpinang</option>
+                                                            <option value="4">SMAN 4 Tanjungpinang</option>
+                                                            <option value="5">SMAN 5 Tanjungpinang</option>
+                                                            <option value="6">SMAN 6 Tanjungpinang</option>
+                                                            <option value="7">SMAN 7 Tanjungpinang</option>
                                                         </select>
                                                     </div>
                                                 </div>

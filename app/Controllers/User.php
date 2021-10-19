@@ -74,14 +74,14 @@ class User extends BaseController
         return view('user/data-kab_kot');
     }
 
-    public function datadiri($id)
+    public function datadiri($id, $id_kabupaten, $id_sekolah)
     {
 
 
         $data = [
             'DetailUser' => $this->userModel->find($id),
-            'Sekolah' => $this->sekolahModel->where('id', $id)->findAll()[0],
-            'Kota' => $this->kotaModel->where('id', $id)->findAll()[0]
+            'Sekolah' => $this->sekolahModel->where('id', $id_sekolah)->findAll()[0],
+            'Kota' => $this->kotaModel->where('id', $id_kabupaten)->findAll()[0]
         ];
 
         return view('user/data-diri', $data);
