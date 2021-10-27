@@ -13,7 +13,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="<?= base_url() ?>/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.bootstrap4.min.css">
 
     <!-- Template CSS -->
@@ -30,154 +30,14 @@
                     <ul class="navbar-nav mr-3">
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
                                     class="fas fa-bars"></i></a></li>
-                        <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
-                                    class="fas fa-search"></i></a></li>
                     </ul>
-                    <div class="search-element">
-                        <input class="form-control" type="search" placeholder="Cari" aria-label="Search"
-                            data-width="250">
-                        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                        <div class="search-backdrop"></div>
-                    </div>
                 </form>
                 <ul class="navbar-nav navbar-right">
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                            class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                            <div class="dropdown-header">Messages
-                                <div class="float-right">
-                                    <a href="#">Mark All As Read</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-list-content dropdown-list-message">
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-1.png"
-                                            class="rounded-circle">
-                                        <div class="is-online"></div>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Kusnaedi</b>
-                                        <p>Hello, Bro!</p>
-                                        <div class="time">10 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-2.png"
-                                            class="rounded-circle">
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Dedik Sugiharto</b>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                                        <div class="time">12 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-3.png"
-                                            class="rounded-circle">
-                                        <div class="is-online"></div>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Agung Ardiansyah</b>
-                                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        <div class="time">12 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-4.png"
-                                            class="rounded-circle">
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Ardian Rahardiansyah</b>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                                        <div class="time">16 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-avatar">
-                                        <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-5.png"
-                                            class="rounded-circle">
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Alfa Zulkarnain</b>
-                                        <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <div class="time">Yesterday</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="dropdown-footer text-center">
-                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
-                            class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                            <div class="dropdown-header">Notifications
-                                <div class="float-right">
-                                    <a href="#">Mark All As Read</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-list-content dropdown-list-icons">
-                                <a href="#" class="dropdown-item dropdown-item-unread">
-                                    <div class="dropdown-item-icon bg-primary text-white">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        Template update is available now!
-                                        <div class="time text-primary">2 Min Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-icon bg-info text-white">
-                                        <i class="far fa-user"></i>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>You</b> and <b>Dedik Sugiharto</b> are now friends
-                                        <div class="time">10 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-icon bg-success text-white">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                                        <div class="time">12 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-icon bg-danger text-white">
-                                        <i class="fas fa-exclamation-triangle"></i>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        Low disk space. Let's clean it!
-                                        <div class="time">17 Hours Ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    <div class="dropdown-item-icon bg-info text-white">
-                                        <i class="fas fa-bell"></i>
-                                    </div>
-                                    <div class="dropdown-item-desc">
-                                        Welcome to Stisla template!
-                                        <div class="time">Yesterday</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="dropdown-footer text-center">
-                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="<?= base_url() ?>/img/avatar/avatar-1.png"
                                 class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, Administrator</div>
+                            <div class="d-sm-none d-lg-inline-block">Hai, Administrator</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">admin@admin.com</div>
@@ -192,32 +52,22 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">Simdikna</a>
+                        <a href="<?= base_url('admin/dashboard'); ?>">Simdikna</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">Sd</a>
+                        <a href="<?= base_url('admin/dashboard'); ?>">Sd</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
-                        <li><a class="nav-link" href="index.html"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
+                        <li><a class="nav-link" href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i>
+                                <span>Dashboard</span></a>
                         </li>
-                        <li class="menu-header">Menu</li>
-                        <li class="nav-item dropdown active">
-                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-user"></i>
-                                <span>PTK Non ASN</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="/admin/editData">Lihat Data</a></li>
-                                <li class="active"><a class="nav-link" href="/admin/editData">Ubah Data</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-dollar-sign"></i>
-                                <span>Penggajian</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="#">Data Tahunan</a></li>
-                                <li><a class="nav-link" href="#">Data Bulanan</a></li>
-                            </ul>
-                        </li>
+                        <li class="menu-header">PTK Non ASN</li>
+                        <li><a class="nav-link" href="<?= base_url('admin/lihatData'); ?>"><i class="fas fa-users"></i>
+                                <span>Lihat Data</span></a></li>
+                        <li class="active"><a class="nav-link" href="<?= base_url('admin/editData'); ?>"><i
+                                    class="fas fa-users-cog"></i>
+                                <span>Ubah Data</span></a></li>
                     </ul>
 
                     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
@@ -234,7 +84,8 @@
                     <div class="section-header">
                         <h1>Ubah Data</h1>
                         <div class="section-header-breadcrumb">
-                            <div class="breadcrumb-item active"><a href="/">Dashboard</a></div>
+                            <div class="breadcrumb-item active"><a
+                                    href="<?= base_url('admin/dashboard'); ?>">Dashboard</a></div>
                             <div class="breadcrumb-item"><a href="#">PTK Non ASN</a></div>
                             <div class="breadcrumb-item">Ubah Data</div>
                         </div>
@@ -373,8 +224,8 @@
     <script src="<?= base_url() ?>/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script src="<?= base_url() ?>/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="<?= base_url() ?>/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>/modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>/modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.bootstrap4.min.js"></script>
 
@@ -383,7 +234,7 @@
     <script src="<?= base_url() ?>/js/custom.js"></script>
 
     <!-- Page Specific JS File -->
-    <script src="<?= base_url() ?>/js/page/edit-data-ptk.js"></script>
+    <script src="<?= base_url() ?>/js/edit-data-ptk.js"></script>
 </body>
 
 </html>

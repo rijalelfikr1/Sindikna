@@ -3,7 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-
+use App\Models\SekolahModel;
+use App\Models\KotaModel;
+use App\Models\PosisiModel;
 
 class Admin extends BaseController
 {
@@ -11,11 +13,34 @@ class Admin extends BaseController
     public function __construct()
     {
         $this->userModel = new UserModel();
+        $this->posisiModel = new PosisiModel();
+        $this->sekolahModel = new SekolahModel();
+        $this->kotaModel = new KotaModel();
     }
 
-    public function index()
+    public function detailUser($id, $id_sekolah, $id_kabupaten)
     {
-        return view('auth-login-2');
+        $data = [
+            'DetailUser' => $this->userModel->find($id),
+            'Sekolah' => $this->sekolahModel->where('id', $id_sekolah)->findAll()[0],
+            'Kota' => $this->kotaModel->where('id', $id_kabupaten)->findAll()[0]
+        ];
+
+        return view('admin/detail-data', $data);
+    }
+
+    public function dashboard()
+    {
+        return view('admin/index');
+    }
+
+    public function lihatData()
+    {
+        $data = [
+            'userList' => $this->userModel->getAllUser()
+        ];
+
+        return view('admin/lihat-data', $data);
     }
 
     public function editData()
@@ -28,11 +53,13 @@ class Admin extends BaseController
         return view('admin/edit-data', $data);
     }
 
-    public function ubahData($id)
+    public function ubahData($id, $id_sekolah, $id_kabupaten)
     {
 
         $data = [
             'DetailUser' => $this->userModel->find($id),
+            'Sekolah' => $this->sekolahModel->where('id', $id_sekolah)->findAll()[0],
+            'Kota' => $this->kotaModel->where('id', $id_kabupaten)->findAll()[0]
         ];
 
         return view('admin/ubah-data', $data);

@@ -8,7 +8,7 @@ class UserModel extends Model
 {
     protected $table      = 'user';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['no_rek', 'NIK', 'Nama', 'Alamat', 'Tempat_lahir', 'Pendidikan_Terakhir', 'Tanggal_Masuk', 'Agama', 'Telp', 'JK', 'id_sekolah', 'id_kabupaten', 'Jabatan', 'No_NPWP', 'No_BPJS_Kes', 'No_BPJS_TK', 'Tgl_keluar'];
+    protected $allowedFields = ['no_rek', 'NIK', 'Nama', 'Alamat', 'Tempat_lahir', 'Pendidikan_Terakhir', 'Tanggal_Masuk', 'Agama', 'Telp', 'JK', 'id_sekolah', 'sekolah', 'id_kabupaten', 'Jabatan', 'No_NPWP', 'No_BPJS_Kes', 'No_BPJS_TK', 'Tgl_keluar'];
 
     protected $useTimestamps = true;
 
