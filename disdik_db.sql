@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Okt 2021 pada 03.25
+-- Waktu pembuatan: 29 Okt 2021 pada 19.44
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -70,10 +70,17 @@ INSERT INTO `kabupatenkota` (`id`, `Kota`) VALUES
 --
 
 CREATE TABLE `login` (
-  `NIP` varchar(50) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `role` varchar(50) NOT NULL
+  `id` int(11) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `login`
+--
+
+INSERT INTO `login` (`id`, `email`, `password`) VALUES
+(2, 'admin@example.com', '$2y$10$LVs6g4qN3MwcYOCESamst.1VOcvtctWMTbOz2d2daWbDTbWLGBdbC');
 
 -- --------------------------------------------------------
 
@@ -153,6 +160,12 @@ ALTER TABLE `kabupatenkota`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `sekolah`
 --
 ALTER TABLE `sekolah`
@@ -172,6 +185,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `kabupatenkota`
 --
 ALTER TABLE `kabupatenkota`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `login`
+--
+ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
