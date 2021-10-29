@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>/bootstrap/bootstrap-social.css">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/style1.css">
     <link rel="stylesheet" href="<?= base_url() ?>/css/components.css">
 </head>
 
@@ -31,7 +31,8 @@
                         <h4 class="text-dark font-weight-normal">Selamat datang di <span
                                 class="font-weight-bold">Simdikna</span></h4>
                         <p class="text-muted">Sistem Informasi Pendidik dan Tenaga Pendidik Non ASN</p>
-                        <form method="POST" action="#" class="needs-validation" novalidate="">
+                        <form method="POST" action="<?= base_url('auth/login') ?>" class="needs-validation"
+                            novalidate="">
                             <div class="form-group floating-addon">
                                 <label for="email">Email</label>
                                 <div class="input-group">

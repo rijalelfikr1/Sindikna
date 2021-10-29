@@ -43,9 +43,9 @@
                             <div class="d-sm-none d-lg-inline-block">Hai, Administrator</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-title">admin@admin.com</div>
+                            <div class="dropdown-title"><?= session()->get('email') ?></div>
                             <div class="dropdown-divider"></div>
-                            <a href="auth-login-2.html" class="dropdown-item has-icon text-danger">
+                            <a href="<?= base_url('auth/logout') ?>" class="dropdown-item has-icon text-danger">
                                 <i class="fas fa-sign-out-alt"></i> Keluar
                             </a>
                         </div>
@@ -55,7 +55,7 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="<?= base_url('admin/dashboard'); ?>">Simdikna</a>
+                        <a href="<?= base_url(); ?>">Simdikna</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="<?= base_url('admin/dashboard'); ?>">Sd</a>
@@ -74,7 +74,8 @@
                     </ul>
 
                     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-                        <a href="auth-login.html" class="btn btn-danger btn-lg btn-block btn-icon-split">
+                        <a href="<?= base_url('auth/keluar'); ?>"
+                            class="btn btn-danger btn-lg btn-block btn-icon-split">
                             <i class="fas fa-sign-out-alt"></i> Keluar
                         </a>
                     </div>

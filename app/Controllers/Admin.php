@@ -20,6 +20,11 @@ class Admin extends BaseController
 
     public function detailUser($id, $id_sekolah, $id_kabupaten)
     {
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $data = [
             'DetailUser' => $this->userModel->find($id),
             'Sekolah' => $this->sekolahModel->where('id', $id_sekolah)->findAll()[0],
@@ -31,11 +36,23 @@ class Admin extends BaseController
 
     public function dashboard()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         return view('admin/index');
     }
 
     public function lihatData()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $data = [
             'userList' => $this->userModel->getAllUser()
         ];
@@ -46,6 +63,11 @@ class Admin extends BaseController
     public function editData()
     {
 
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $data = [
             'userList' => $this->userModel->getAllUser()
         ];
@@ -55,6 +77,11 @@ class Admin extends BaseController
 
     public function ubahData($id, $id_sekolah, $id_kabupaten)
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
 
         $data = [
             'DetailUser' => $this->userModel->find($id),
@@ -67,11 +94,21 @@ class Admin extends BaseController
 
     public function tambahData()
     {
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         return view('admin/add-data');
     }
 
     public function addUser()
     {
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         if (!$this->validate([
             'nik' => 'required|is_unique[user.NIK,nik]',
             'name' => 'required',
@@ -124,6 +161,11 @@ class Admin extends BaseController
     }
     public function updateData($id)
     {
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $NIK = $this->request->getVar('nik');
         $Nama = $this->request->getVar('name');
         $Alamat = $this->request->getVar('alamat');

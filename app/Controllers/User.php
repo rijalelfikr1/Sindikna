@@ -20,11 +20,23 @@ class User extends BaseController
 
     public function index()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         return view('user/index');
     }
 
     public function dataprovinsi()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $db     = \Config\Database::connect();
         $builder = $db->table('user');
         $builder->countAllResults();
@@ -50,6 +62,12 @@ class User extends BaseController
 
     public function dataprov()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         $db     = \Config\Database::connect();
         $builder = $db->table('user');
         $builder->countAllResults();
@@ -66,17 +84,34 @@ class User extends BaseController
 
     public function datatanjungpinang()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         return view('user/tanjungpinang');
     }
 
     public function kabupatenKota()
     {
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
+
         return view('user/data-kab_kot');
     }
 
     public function datadiri($id, $id_kabupaten, $id_sekolah)
     {
 
+
+        $session = \Config\Services::session();
+        if ($session->get('email') == null) {
+            return redirect()->to('/auth/index');
+        }
 
         $data = [
             'DetailUser' => $this->userModel->find($id),

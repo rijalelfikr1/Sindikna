@@ -48,7 +48,9 @@
                     <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
                     <li><a class="nav-link" href="/user/dataprovinsi">Data Provinsi</a></li>
                     <li><a class="nav-link" href="/user/kabupatenKota">Data Kabupaten-Kota</a></li>
-                    <li><a class="getstarted" href="#">Masuk</a></li>
+                    <li><a class="getstarted"
+                            href="<?= base_url() ?>/auth/login"><?= (session()->get('email') != null) ? 'Dashboard' : 'Masuk'  ?>
+                        </a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
