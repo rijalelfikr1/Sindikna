@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Sep 2021 pada 11.49
+-- Waktu pembuatan: 28 Okt 2021 pada 03.25
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -60,7 +60,8 @@ CREATE TABLE `kabupatenkota` (
 --
 
 INSERT INTO `kabupatenkota` (`id`, `Kota`) VALUES
-(1, 'Tanjungpinang');
+(1, 'Tanjungpinang'),
+(2, 'Batam');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,9 @@ CREATE TABLE `sekolah` (
 --
 
 INSERT INTO `sekolah` (`id`, `id_kota`, `sekolah`) VALUES
-(1, 1, 'SDN 07 Tanjungpinang');
+(1, 1, 'SMAN 1 Tanjungpinang'),
+(2, 1, 'SMAN 2 Tanjungpinang'),
+(3, 2, 'SDN 015 Kota Batam');
 
 -- --------------------------------------------------------
 
@@ -129,8 +132,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `no_rek`, `NIK`, `Nama`, `Pendidikan_Terakhir`, `Alamat`, `Tempat_lahir`, `Tanggal_lahir`, `Agama`, `Telp`, `JK`, `NRPTK`, `id_kabupaten`, `id_sekolah`, `Tanggal_Masuk`, `Jabatan`, `No_NPWP`, `No_BPJS_Kes`, `No_BPJS_TK`, `Tgl_keluar`, `created_at`, `updated_at`) VALUES
-(1, '0154826154', 123456, 'Anuu', 'S1 Pendidikan Agama Islam', 'jalan raja muda', 'tanjungpinang', '2000-04-03', 'Islam', 258520, 'Laki-Laki', '025878520', 1, 1, '2021-09-09', 'Kepala Dinas', '025878965412', '023658485', '256848268', '2021-09-16', '2021-09-15 16:12:37', '2021-09-17 09:17:04'),
-(2, '3435324', 354546, 'siapa', 'S1 teknik', 'Tanjungpinang', 'tanjungpinang', '2021-09-15', 'Islam', 53423, 'Laki-Laki', '324235465345', 1, 1, '2021-09-02', 'Kepala Dinas', '02587896541223', '124123', '123123', NULL, '2021-09-17 03:49:38', '2021-09-17 09:17:04');
+(1, '0154826154', 21321312343, 'asd', 'S1 Biologi', 'Bukit bestari 1', 'weqwe', '2000-04-03', 'Islam', 4563452, 'Laki - laki', '025878520', 2, 2, '0000-00-00', 'Kepala sekolah', '234', '2232', '232', '0000-00-00', '2021-10-08 13:26:46', '2021-09-27 01:58:02'),
+(2, '3435324', 354546, 'siapa', 'S1 teknik', 'Tanjungpinang', 'tanjungpinang', '2021-09-15', 'Islam', 53423, 'Laki-Laki', '324235465345', 1, 1, '2021-09-02', 'Kepala Dinas', '02587896541223', '124123', '123123', NULL, '2021-09-17 03:49:38', '2021-09-17 09:17:04'),
+(7, '', 234234, 'Rijal Elfikri as', 'S1 Biologi', 'Bukit bestari 1', 'weqwe', '0000-00-00', 'Islam', 23423234, 'Laki - laki', '', 1, 2, '2021-10-20', 'Kepala sekolah', '324', '234234', '23423', '0000-00-00', '2021-10-27 10:47:33', '2021-10-26 22:47:07');
 
 --
 -- Indexes for dumped tables
@@ -152,8 +156,7 @@ ALTER TABLE `kabupatenkota`
 -- Indeks untuk tabel `sekolah`
 --
 ALTER TABLE `sekolah`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_kota` (`id_kota`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `user`
@@ -169,19 +172,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `kabupatenkota`
 --
 ALTER TABLE `kabupatenkota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `sekolah`
 --
 ALTER TABLE `sekolah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
